@@ -36,14 +36,12 @@ public class MovieDriver {
         System.out.println("Movies sorted by release year (Bubble Sort):");
         for (Movie movie : movies) {
             System.out.println(movie.getTitle() + " (" + movie.getYear() + ")");
-            // Measure time for bubble sort
-            long startTimeBubbleSort = System.currentTimeMillis();
-            bubbleSortByReleaseYear(movies);
-            long endTimeBubbleSort = System.currentTimeMillis();
-            long elapsedTimeBubbleSort = endTimeBubbleSort - startTimeBubbleSort;
-            System.out.println("Bubble Sort Time: " + elapsedTimeBubbleSort + " milliseconds");
         }
-
+        long startTimeBubbleSort = System.currentTimeMillis();
+        bubbleSortByReleaseYear(movies);
+        long endTimeBubbleSort = System.currentTimeMillis();
+        long elapsedTimeBubbleSort = endTimeBubbleSort - startTimeBubbleSort;
+        System.out.println("Bubble Sort Time: " + elapsedTimeBubbleSort + " milliseconds");
         System.out.println();
 
         shuffleArray(movies);
