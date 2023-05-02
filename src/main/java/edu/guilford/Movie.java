@@ -98,7 +98,7 @@ public class Movie {
     @Override
     public String toString() {
         return "Title: " + this.title + "\nDirector: " + this.director + "\nYear: " + this.year + "\nDuration: "
-                + this.durationInMin + " minutes" + "\nRating: " + this.rating + "\n";
+                + this.durationInMin + " minutes" + "\nRating: " + this.rating + "\n ";
     }
 
 }
