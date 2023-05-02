@@ -24,7 +24,7 @@ public class MovieDriver {
         }
 
         // print out the unsorted array of movies
-        System.out.println("Unsorted Movies: \n");
+        System.out.println("Unsorted Movies(Round 1): \n");
         // for every Movie object in the array movies, print it out.
         for (Movie movie : movies) {
             System.out.println(movie);
@@ -37,11 +37,11 @@ public class MovieDriver {
         for (Movie movie : movies) {
             System.out.println(movie.getTitle() + " (" + movie.getYear() + ")");
         }
-        long startTimeBubbleSort = System.currentTimeMillis();
+        long startTimeBubbleSort = System.nanoTime();
         bubbleSortByReleaseYear(movies);
-        long endTimeBubbleSort = System.currentTimeMillis();
+        long endTimeBubbleSort = System.nanoTime();
         long elapsedTimeBubbleSort = endTimeBubbleSort - startTimeBubbleSort;
-        System.out.println("Bubble Sort Time: " + elapsedTimeBubbleSort + " milliseconds");
+        System.out.println("Bubble Sort Time: " + elapsedTimeBubbleSort + " nanoseconds");
         System.out.println();
 
         shuffleArray(movies);
@@ -53,13 +53,13 @@ public class MovieDriver {
         System.out.println("\nMovies sorted by duration time (Merge Sort):");
         for (Movie movie : movies) {
             System.out.println(movie.getTitle() + " (" + movie.getDurationInMin() + " Min)");
-            // Measure time for merge sort
-            long startTimeMergeSort = System.currentTimeMillis();
-            mergeSortByDuration(movies);
-            long endTimeMergeSort = System.currentTimeMillis();
-            long elapsedTimeMergeSort = endTimeMergeSort - startTimeMergeSort;
-            System.out.println("Merge Sort Time: " + elapsedTimeMergeSort + " milliseconds");
         }
+        // Measure time for merge sort
+        long startTimeMergeSort = System.nanoTime();
+        mergeSortByDuration(movies);
+        long endTimeMergeSort = System.nanoTime();
+        long elapsedTimeMergeSort = endTimeMergeSort - startTimeMergeSort;
+        System.out.println("Merge Sort Time: " + elapsedTimeMergeSort + " nanoseconds");
     }
 
     // Bubble sort method (O(n^2))
